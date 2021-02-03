@@ -30,3 +30,10 @@ form{
     font-weight: bold;
     font-family: 'Xanh Mono', monospace;
 }
+
+.error {
+    margin: auto;
+    color: red;
+    font-size: 16px;
+    margin-left: 80px;
+}

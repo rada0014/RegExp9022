@@ -10,15 +10,19 @@
 
 <body>
     <form>
-        <label for="fname">First name: </label>
-        <input type="text" id="fname" name="fname"><br><br><br>
-        <label for="lname">Last name:</label>
-        <input type="text" id="lname" name="lname"><br><br><br>
+            <label for="fname">First name: </label>
+            <input type="text" id="fname" name="fname" required><br><span class="error one"></span><br><br>
+            
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname" name="lname" required><br><span class="error two"></span><br><br>
+
 
             <label for="email">email: </label>
-            <input type="text" id="email" name="email"><br><br><br>
+            <input type="text" id="email" name="email" required><br><span class="error three"></span><br><br>
+
             <label for="BACKUPemail">secondary email: </label>
-            <input type="text" id="BACKUPemail" name="BACKUPemail"><br><br><hr><br>
+            <input type="text" id="BACKUPemail" name="BACKUPemail" required><br><span class="error four"></span><br><hr><br>
+
 
 
             <label for="SQ">First Security Question: </label>
@@ -28,7 +32,8 @@
             <option value="opel">What's your favorite team?</option>
             <option value="audi">Where do you like eating the most?</option><br>
         </select><br><br><br>
-        <input style="width: 400px;" type="text" id="SQ2" name="BACKUPemail"><br><br><br>
+        <input style="width: 400px;" type="text" id="SQinput" name="SQinput" required><br><span class="error five"></span><br><br><br>
+
 
 
         
@@ -38,11 +43,14 @@
             <option value="saab">What's the name of your oldest brother?</option>
             <option value="opel">What's your favorite team?</option>
             <option value="audi">Where do you like eating the most?</option><br>
-        </select><br><br><br>
-        <input style="width: 400px;" type="text" id="SQ2" name="BACKUPemail">
+        </select><br>
+        <br><br>
+        <input style="width: 400px;" type="text" id="SQ2input" name="SQ2input" required><br><span class="error six"></span>
+
 
             <br><br>            <br><br>
-            <input id="submit" type="submit" value="Submit">
+            <input onsubmit="clearForm()" style="background-color: lightblue;" id="submit" type="submit" value="Submit">
     </form> 
+    <script src="./js/main.js"></script>
 </body>
 </html>
